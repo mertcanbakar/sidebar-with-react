@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Mulish", sans-serif;
+}
+:root {
+  --body-color: #e4e9f7;
+  --sidebar-color: #fff;
+  --primary-color: #695cfe;
+  --primary-color-light: #f6f5ff;
+  --toggle-color: #ddd;
+  --text-color: #707070;
+  --border-color: #70707035;
+
+  --tran-02: all 0.2 ease;
+  --tran-03: all 0.3 ease;
+  --tran-04: all 0.4 ease;
+  --tran-05: all 0.5 ease;
+}
+
+.text,
+.dark-text {
+  white-space: nowrap;
+}
+body {
+  height: 100vh;
+  background-color: var(--body-color);
+  transition: all 0.3 ease;
+}
+.header {
+  position: relative;
+  height: 50px;
+  border-bottom: 1px solid var(--border-color);
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  padding: 10px 14px;
+  background-color: var(--sidebar-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+.image {
+  min-width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image img {
+  width: 40px;
+}
+.image-text {
+  display: flex;
+  align-items: center;
+}
+.header-text {
+  display: flex;
+  flex-direction: column;
+}
+.name {
+  font-weight: 600;
+}
+.profession {
+  margin-top: -2px;
+}
+.toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 25%;
+  right: -25px;
+  transform: translateY(-25%);
+  height: 25px;
+  width: 25px;
+  color: var(--sidebar-color);
+  font-size: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.menu-link {
+  height: 50px;
+  margin-top: 10px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.menu-link a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: all 300ms;
+  border-radius: 10px;
+}
+.icon {
+  min-width: 60px;
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.menu-link a:hover {
+  transition: all 300ms;
+  background-color: var(--primary-color);
+  color: var(--sidebar-color);
+}
+.bottom-content {
+  margin-top: 25px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top: 1px solid var(--border-color);
+}
+.bottom-content ul li {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  list-style: none;
+  transition: all 300ms;
+  border-radius: 10px;
+}
+.logout {
+  cursor: pointer;
+}
+.bottom-content ul .logout:hover {
+  transition: all 300ms;
+  background-color: var(--primary-color);
+  color: var(--sidebar-color);
+}
+.open {
+  transition: all 300ms;
+  transform: rotate(180deg);
+}
+.close {
+  transition: all 300ms;
+}
+.toggle-switch {
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 60px;
+  cursor: pointer;
+}
+.switch {
+  position: relative;
+  height: 22px;
+  width: 44px;
+  background-color: var(--text-color);
+  border-radius: 25px;
+}
+.switch::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: var(--primary-color-light);
+  transition: all 300ms;
+}
+.mode {
+  position: relative;
+  background-color: var(--primary-color-light);
+}
+.dark::before {
+  left: 24px;
+}
+.dark {
+  transition: all 300ms;
+  background-color: var(--body-color);
+}
